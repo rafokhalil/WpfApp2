@@ -1,0 +1,95 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.ColumnSpan="2">
+            <Border x:Name="button" 
+                Height="95" 
+                Width="95" 
+                MouseEnter="button_MouseEnter"
+                Background="Red"
+                CornerRadius="50" 
+                Canvas.Left="687" Canvas.Top="10" >
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button" 
+                                                 Storyboard.TargetProperty="(Canvas.Left)"
+                                                 From="1000"
+                                                 To="450"
+                                                 Duration="0:0:0:0.5">
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Label  Content="Home" FontSize="20" Margin="16,23,-16,-23"  ></Label>
+            </Border>
+
+            <Border x:Name="btn2" 
+                Height="95" 
+                Width="95" 
+                 MouseEnter="btn2_MouseEnter"
+                Background="Yellow"
+                CornerRadius="50" 
+                Canvas.Left="369" Canvas.Top="314">
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="btn2" 
+                                                 Storyboard.TargetProperty="(Canvas.Top)"
+                                                 From="400"
+                                                 To="100"
+                                                 Duration="0:0:0:0.5">
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Label  Content="" FontSize="20" Margin="16,23,-16,-23"  ></Label>
+            </Border>
+
+            
+
+            <Border x:Name="btn3" 
+                Height="95" 
+                Width="95" 
+                MouseEnter="btn3_MouseEnter"
+                Background="SpringGreen"
+                CornerRadius="50" 
+                 
+                Canvas.Left="10" Canvas.Top="10" Canvas.Right="0">
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="btn3" 
+                                                 Storyboard.TargetProperty="(Canvas.Left)"
+                                                 From="450"
+                                                 To="300"
+                                                 Duration="0:0:0:0.5">
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Label  Content="" FontSize="20" Margin="16,23,-16,-23"  ></Label>
+            </Border>
+
+        </Canvas>
+    </Grid>
+</Window>
